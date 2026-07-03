@@ -31,9 +31,9 @@ jobs:
       - name: Deploy to WebApp
         run: |
           az webapp config container set \
-          -g RGLabDeploy-thomas \
-          -n labdeploy-webapp-thomas \
-          --container-image-name labdeployacrthomas.azurecr.io/myapp:latest \
-          --container-registry-url https://labdeployacrthomas.azurecr.io \
-          --container-registry-user ${{secrets.ACR_USER}} \
-          --container-registry-password ${{secrets.ACR_PWD}}
+            -g RGLabDeploy-thomas \
+            -n labdeploy-webapp-thomas \
+            --container-image-name labdeployacrthomas.azurecr.io/myapp:latest \
+            --container-registry-url https://labdeployacrthomas.azurecr.io \
+            --container-registry-user "${{ secrets.ACR_USER }}" \
+            --container-registry-password "${{ secrets.ACR_PWD }}"
