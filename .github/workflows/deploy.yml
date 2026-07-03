@@ -26,4 +26,4 @@ jobs:
           --container-image-name labdeployacrthomas.azurecr.io/myapp:latest \
           --container-registry-url https://labdeployacrthomas.azurecr.io \
           --container-registry-user ${{secrets.ACR_USER}} \
-          --container-registry-user ${{secrets.ACR_PWD}}
+          --container-registry-password ${{secrets.ACR_PWD}}
